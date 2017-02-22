@@ -12,6 +12,7 @@ Getting started with Convox is easy. The instructions below guide you through:
 
 This guide takes around 30 minutes to go from zero to your first production deployment.
 
+
 ## Sign Up
 
 First, [sign up for Convox Console](https://convox.com/signup), a web UI for managing your Organizations, Integrations and Racks.
@@ -46,27 +47,34 @@ Click the **Setup** button then **Connect the Convox CLI** to get your API key.
 
 Next, [install the Convox CLI](/docs/installation/) for your platform.
 
-<pre id="install-mac">
-$ curl -Ls https://convox.com/install/osx.zip > /tmp/convox.zip
-$ unzip /tmp/convox.zip -d /usr/local/bin
-</pre>
+```command
+curl -Ls https://convox.com/install/osx.zip > /tmp/convox.zip
+```
+```command
+unzip /tmp/convox.zip -d /usr/local/bin
+```
 
-<pre id="install-linux" class="hidden" >
-$ curl -Ls https://convox.com/install/linux.zip > /tmp/convox.zip
-$ unzip /tmp/convox.zip -d /usr/local/bin
-</pre>
+```command-linux
+LINUX
+curl -Ls https://convox.com/install/linux.zip > /tmp/convox.zip
+unzip /tmp/convox.zip -d /usr/local/bin
+```
 
-<p id="install-windows" class="hidden">
+<p id="install-windows" class="hixdden">
 On Windows, download and run <a href="https://dl.equinox.io/convox/convox/stable">Windows Installer</a>. Read the <a href="https://convox.com/docs/windows/">Windows Reference</a> for full details.
 </p>
 
+
 Finally, use the `convox login` command with your API key:
 
-<pre id="login">
-$ convox login
+```command
+convox login 
+```
+```
 API Key:
 Logged in successfully.
-</pre>
+```
+
 
 See [Installing the Convox CLI](/docs/installation/) and [API Keys](/docs/api-keys/) for more details.
 
@@ -114,19 +122,3 @@ Now that you've deployed your first application you can:
 * Install another Rack for isolated development or staging deployments
 
 Or you can easily [uninstall everything](/docs/uninstalling-convox/) you just experimented with.
-
-<script>
-$(document).ready(function() {
-  if (navigator.platform.indexOf('Win') > -1) {
-    $('#install-windows').removeClass('hidden')
-    $('#install-mac').addClass('hidden')
-    $('#install-linux').addClass('hidden')
-  }
-
-  if (navigator.platform.indexOf('Linux') > -1) {
-    $('#install-linux').removeClass('hidden')
-    $('#install-mac').addClass('hidden')
-    $('#install-windows').addClass('hidden')
-  }
-});
-</script>

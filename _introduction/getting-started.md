@@ -47,28 +47,28 @@ Click the **Setup** button then **Connect the Convox CLI** to get your API key.
 
 Next, [install the Convox CLI](/docs/installation/) for your platform.
 
-```command
-curl -Ls https://convox.com/install/osx.zip > /tmp/convox.zip
-```
-```command
-unzip /tmp/convox.zip -d /usr/local/bin
-```
+<pre id="install-mac"><code class="language-command">curl -Ls https://convox.com/install/osx.zip &gt; /tmp/convox.zip
+</code></pre>
 
-```command-linux
-LINUX
-curl -Ls https://convox.com/install/linux.zip > /tmp/convox.zip
-unzip /tmp/convox.zip -d /usr/local/bin
-```
+<pre id="install-mac"><code class="language-command">unzip /tmp/convox.zip -d /usr/local/bin
+</code></pre>
 
-<p id="install-windows" class="hixdden">
+<pre id="install-linux" class="hidden"><code class="language-command">curl -Ls https://convox.com/install/linux.zip > /tmp/convox.zip
+</code></pre>
+
+<pre id="install-linux" class="hidden"><code class="language-command">unzip /tmp/convox.zip -d /usr/local/bin
+</code></pre>
+
+<p id="install-windows" class="hidden">
 On Windows, download and run <a href="https://dl.equinox.io/convox/convox/stable">Windows Installer</a>. Read the <a href="https://convox.com/docs/windows/">Windows Reference</a> for full details.
 </p>
+
 
 
 Finally, use the `convox login` command with your API key:
 
 ```command
-convox login 
+convox login
 ```
 ```
 API Key:
@@ -82,14 +82,18 @@ See [Installing the Convox CLI](/docs/installation/) and [API Keys](/docs/api-ke
 
 #### Clone a sample application
 
-    $ git clone https://github.com/convox-examples/rails
-    $ cd rails
+```command
+git clone https://github.com/convox-examples/rails && cm rails
+```
+
 
 #### Create an app in your Rack
 
 Before deploying, create a new app in your Rack.
 
-    $ convox apps create
+```command
+convox apps create
+```
 
 <div class="block-callout block-show-callout type-info" markdown="1">
 Convox infers the app name from the current directory name. If you'd like to specify another name use `convox apps create <name>` and specify `--app <name>` to each of the following commands.
@@ -97,16 +101,20 @@ Convox infers the app name from the current directory name. If you'd like to spe
     
 Wait for the underlying components to be created by watching for the app status to change to `running`:
 
-    $ convox apps info
-    
+```command
+convox apps info
+```    
 Deploy the application
 
-    $ convox deploy
-    
+```command
+convox deploy
+``` 
 Continue to watch `convox apps info` to find the load balancer hostnames for the application.
 
-    $ convox apps info
-    
+```command
+convox apps info
+``` 
+
 <div class="block-callout block-show-callout type-info" markdown="1">
 When a load balancer is first created it can take 5-10 minutes for its hostname to become available in DNS.
 </div>

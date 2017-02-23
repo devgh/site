@@ -1143,7 +1143,9 @@ footer .footer-bottom ul li a,footer .footer-bottom a {
 
 pre {
   border: none;
-background-color: inherit;  
+  background-color: inherit;  ;
+  padding-right: 0;
+  padding-left: 0
 }
 
 pre span {
@@ -1763,24 +1765,93 @@ input#mc-embedded-subscribe {
   white-space: pre;
   display: block;
   overflow-x: auto;
-  padding: 0.5em;
+  padding: 11px 14px;
   color: #666;
+  line-height: 19px;
   font-family: 'Roboto Mono', Monaco, Consolas, monospace;
-  background: #f8f8f8;
+  background: #eee;
   -webkit-text-size-adjust: none;
+  border-radius: 4px;
+  border: 1 solid;
+  }
+
+.docs pre code.language-command, .docs pre code.language-command-linux {
+  border-radius: 0 0 4px 4px;
+}
+.command-nav {
+  background-color: #fbfbfb;
+  padding-left: 16px;
+  height: 24px;
+  border: 1 solid;
+  border-radius: 4px 4px 0 0;
+}
+
+.command-nav i, .command-nav img {
+  color: #858b91;
+  line-height: 24px;
+}
+
+.command-nav button, .command-nav .nav-filename {
+  color: #858b91;
+  font-family: 'Roboto', sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.command-nav .btn {
+  padding: 0 4px 0 4px;
+  margin: 0 0 0 12px;
+}
+
+.command-nav .btn:focus {
+    text-decoration: none;
+    border-color: #51a7e8;
+    outline: none;
+    box-shadow: 0 0 5px rgba(81, 167, 232, 0.5)
+}
+.command-nav .btn:focus:hover,
+.command-nav .btn.selected:focus {
+    border-color: #51a7e8
+}
+.command-nav .btn:hover,
+.command-nav .btn:active,
+.command-nav .btn.zeroclipboard-is-hover,
+.command-nav .btn.zeroclipboard-is-active {
+    text-decoration: none;
+    background-color: #ddd;
+    background-image: linear-gradient(#eee, #ddd);
+    border-color: #ccc
+}
+.command-nav .btn:active,
+.command-nav .btn.selected,
+.command-nav .btn.zeroclipboard-is-active {
+    background-color: #dcdcdc;
+    background-image: none;
+    border-color: #b5b5b5;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15)
+}
+.command-nav .btn.selected:hover {
+    background-color: #cfcfcf
+}
+
+.clippy {
+  color: #b8c1c7 !important;
+  margin-bottom: 1px;
+}
+
+.language-command, .language-command-linux {
+      padding: 11px 14px;
+      border-radius: 0 0 4px 4px;
 }
 
 .language-command:before, 
 .language-command-linux:before {
   content:"$ ";
+  color: #b8c1c7;
 }
 
 .docs pre span {
   color: #666;
-}
-
-code.language-command-linux {
-  display: none;
 }
 
 .docs #doc pre.terminal {

@@ -83,7 +83,7 @@ See [Installing the Convox CLI](/docs/installation/) and [API Keys](/docs/api-ke
 #### Clone a sample application
 
 ```command
-git clone https://github.com/convox-examples/rails && cm rails
+git clone https://github.com/convox-examples/rails && cd rails
 ```
 
 

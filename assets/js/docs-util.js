@@ -1,9 +1,8 @@
 $(document).ready(function() {
 
-	$( ".language-command" ).each(function( index ) {
+	$( ".language-command, .language-command-linux" ).each(function( index ) {
 		var content = $(this).text();
-		var copyBtn = "<button class='btn' data-clipboard-text='" + content + "'><img class='clippy' width='13' src='/assets/images/clippy.svg' alt='Copy to clipboard'></button>"
-		console.log( copyBtn );
+		var copyBtn = "<nav class='command-nav'><i class='fa fa-terminal' aria-hidden='true'> <span class='nav-filename'>Terminal</span> </i><button class='btn' data-clipboard-text='" + content + "'><img class='clippy' width='13' src='/assets/images/clippy.svg' alt='Copy to clipboard'> Copy</button></nav>"
 		$(copyBtn).insertBefore(this);
 	});
 

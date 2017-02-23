@@ -1,17 +1,6 @@
-/* unish */
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  color: #666;
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-  /*margin-bottom: 267px;*/
-}
+/* ==========================================================================
+  1. Import local fonts
+========================================================================== */
 
 @font-face {
   font-family: "Lato Black";
@@ -26,6 +15,32 @@ body {
   src: url('../fonts/proxima_nova_bold-webfont.eot?#iefix') format('embedded-opentype'),  url('../fonts/proxima_nova_bold-webfont.woff2') format('woff2'),  url('../fonts/proxima_nova_bold-webfont.woff') format('woff'),  url('../fonts/proxima_nova_bold-webfont.ttf') format('truetype'),  url('../fonts/proxima_nova_bold-webfont.svg#proxima_nova_rgbold') format('svg');
   font-weight: normal;
   font-style: normal;
+}
+
+/* ==========================================================================
+  2. Import fonts from Google Fonts
+========================================================================== */
+    
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300,400);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,400,700,900,300italic,400italic,700italic);
+
+/* ==========================================================================
+  3. General Styles
+========================================================================== */
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  color: #666;
+  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  /*margin-bottom: 267px;*/
 }
 
 p {
@@ -1524,11 +1539,10 @@ pre span {
   }
 }
 
-/*
- *
- * Blog Extras
- *
- */
+/* ==========================================================================
+  X. Blog extras
+========================================================================== */
+
 
 .blog .extras {
   font-size: 80%;
@@ -1630,11 +1644,11 @@ input#mc-embedded-subscribe {
    font-weight: 800;
 }
 
-/*
- *
- * Docs
- *
- */
+
+/* ==========================================================================
+  X. DocsImport css
+========================================================================== */
+
 
 .docs {
   padding: 0 !important;
@@ -1938,11 +1952,10 @@ input#mc-embedded-subscribe {
 .docs #doc .block-show-callout p:last-child {
   margin-bottom: 8px;
 }
-/*
- *
- * Pricing
- *
- */
+
+/* ==========================================================================
+  X. Pricing
+========================================================================== */
 
 .pricing h2 {
   font-size: 2.1em;
@@ -2063,11 +2076,10 @@ input#mc-embedded-subscribe {
 }
 
 
-/*
- *
- * Team
- *
- */
+/* ==========================================================================
+  X. Team
+========================================================================== */
+
 
 .team h2 {
   color: #444;
@@ -2139,11 +2151,10 @@ input#mc-embedded-subscribe {
 }
 
 
-/*
- *
- * Jobs
- *
- */
+/* ==========================================================================
+  X. Jobs
+========================================================================== */
+
 
 .jobs p {
   color: #444;
@@ -2222,11 +2233,7 @@ input#mc-embedded-subscribe {
   }
 }
 
-/*
- *
- * Job
- *
- */
+/* Job */
 
 .job #listing {
   background: #f6f6f6;
@@ -2261,11 +2268,10 @@ input#mc-embedded-subscribe {
 }
 
 
-/*
- *
- * Automation
- *
- */
+/* ==========================================================================
+  X. Automation
+========================================================================== */
+
 
 .automation #features {
   background: #f6f6f6;
@@ -2325,11 +2331,10 @@ input#mc-embedded-subscribe {
 }
 
 
-/*
- *
- * Case
- *
- */
+/* ==========================================================================
+  X. Case
+========================================================================== */
+
 
 .case #study {
   background: #f6f6f6;
@@ -2393,7 +2398,10 @@ h6:hover .header-link {
   opacity: 1;
 }
 
-/* Guide */
+/* ==========================================================================
+  X. Guide
+========================================================================== */
+
 
 .guide #toc li.build,
 .guide #toc li.run,
